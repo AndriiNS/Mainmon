@@ -1,0 +1,52 @@
+<section class="conversation" id="form">
+  <div class="container">
+    <div class="conversation__content">
+      <h2 class="conversation__title">Let’s Start a Conversation</h2>
+      <form action="#" class="conversation__form">
+        <div class="conversation__input-box">
+          <input type="text" name="name" placeholder="First Name" />
+          <input type="text" name="surname" placeholder="Last Name" />
+          <input type="email" name="email" placeholder="Email Address " />
+          <input type="tel" name="phone" placeholder="Phone " />
+        </div>
+        <div class="conversation_choise-box">
+          <div class="conversation__interested">
+            <button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-trigger">
+              <span class="selected-item">Which Inspired Experience are you interested in?</span>
+              <img src="./img/arrow-language.svg" alt="arrow" />
+            </button>
+            <div class="dropdown-container" role="menu">
+              <div class="column left-column">
+                <ul class="conversation__dropdown-choise">
+                  <li class="conversation__dropdown-item" role="menuitem">Book a Stay</li>
+                  <li class="conversation__dropdown-item" role="menuitem">Rent Long-Term</li>
+                  <li class="conversation__dropdown-item" role="menuitem">Events</li>
+                  <li class="conversation__dropdown-item" role="menuitem">Guest Services</li>
+                </ul>
+              </div>
+              <div class="column right-column">
+                <ul class="conversation__dropdown-choise">
+                  <li class="conversation__dropdown-item" role="menuitem">Home Management</li>
+                  <li class="conversation__dropdown-item" role="menuitem">Partner</li>
+                  <li class="conversation__dropdown-item" role="menuitem">Other</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <input type="text" name="more" placeholder="Please tell us more so we can assist you better" />
+        </div>
+        <fieldset class="conversation__agreement">
+          <div class="conversation__agreement-box">
+            <input type="checkbox" id="policy" name="policy" value="agree" required />
+            <label for="policy"><span></span>I have read and agree to the Privacy Policy</label>
+          </div>
+          <div class="conversation__agreement-box">
+            <input type="checkbox" id="receive" name="newsletter" value="subscribe" />
+            <label for="receive"><span></span>I would like to receive newsletter emails</label>
+          </div>
+          <button class="conversation__btn" type="submit">let’s make it happen</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>

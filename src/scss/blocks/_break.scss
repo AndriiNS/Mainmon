@@ -1,0 +1,231 @@
+.break {
+  background-color: #fffff2;
+  padding: 126px 0 100px 0;
+  // .break__content
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+  }
+
+  // .break__info
+
+  &__info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  // .break__title
+
+  &__title {
+    font-family: var(--font-accent);
+    font-weight: 200;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+  }
+
+  // .break__title-top
+
+  &__title-top {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 60px;
+    &::before {
+      content: "";
+      display: block;
+      width: 230px;
+      height: 2px;
+      background-color: var(--accent);
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 230px;
+      height: 2px;
+      background-color: var(--accent);
+    }
+  }
+
+  // .break__title-bottom
+
+  // &__title-bottom {
+  // }
+}
+.break__text-partner {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 170%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent);
+  max-width: 360px;
+  text-align: center;
+  margin: 0 auto;
+}
+.break.partner-break {
+  padding: 150px 0 115px 0;
+}
+.partner-title {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.partner {
+  // .partner__content
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  // .partner__block
+
+  &__block {
+    position: relative;
+    width: 100%;
+    max-width: 384px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    img {
+      inset: 0;
+      z-index: -2;
+    }
+    &:hover {
+      .partner__block-text {
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        &:before {
+          opacity: 1;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  // .partner__block-text
+
+  &__block-text {
+    position: absolute;
+    display: block;
+    font-weight: 200;
+    font-size: 36px;
+    line-height: 112%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    bottom: 0;
+    transition: all 0.3s ease 0s;
+    padding: 64% 52px 0;
+    width: 100%;
+    height: 100%;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(137, 137, 137, 0) 0%, #000 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+  }
+}
+
+//========================================================================================================================================================
+.break.industry {
+  padding-bottom: 183px;
+}
+.break__title.industry-title {
+  font-weight: 200;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent);
+}
+.break__title-top.industry-top {
+  height: auto;
+  gap: 23px;
+}
+.break__title-bottom.industry-bottom {
+  height: auto;
+}
+.swiper-wrapper.break-slide {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.swiper-slide.break-slide {
+  max-width: fit-content;
+  height: 100%;
+}
+.break__partners {
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  gap: 97px;
+}
+.swiper.break-slide {
+  max-width: 775px;
+  margin: 0 auto;
+}
+.swiper-btn-prev,
+.swiper-btn-next {
+  cursor: pointer;
+  position: relative;
+  width: 98px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    &::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.highlights__swiper-inner {
+  position: relative;
+}
+
+.swiper-btn-prev::before,
+.swiper-btn-next::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  transform: translateX(var(--x, 50%)) translateY(-50%);
+  left: 50%;
+  top: 50%;
+  transition: all 0.5s ease 0s;
+}
+
+.swiper-btn-next {
+  rotate: 180deg;
+}

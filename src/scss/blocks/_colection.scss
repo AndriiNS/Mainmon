@@ -1,0 +1,135 @@
+.collection {
+  // .collection__content
+  background-image: url("./../../img/collection-bg.png");
+  background-size: cover;
+  height: 1080px;
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url("./../img/gold.svg");
+    position: absolute;
+    width: 340px;
+    height: 508px;
+    top: 0;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 113px;
+    padding: 124px 0 150px 0;
+  }
+
+  // .collection__top
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .collection__top-title
+
+  &__top-title {
+    font-family: var(--font-accent);
+    font-weight: 200;
+    font-size: 60px;
+    text-transform: uppercase;
+    max-width: 700px;
+  }
+
+  // .collection__top-box
+
+  &__top-box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  // .collection__bottom
+
+  &__bottom {
+    max-width: 870px;
+  }
+
+  // .collection__bottom-list
+
+  &__bottom-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  // .collection__bottom-box
+}
+
+.top-box {
+  // .top-box__more
+
+  &__more {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 0%;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:hover {
+      svg {
+        width: 71px;
+      }
+    }
+    svg {
+      transition: all 0.3s ease 0s;
+      width: 130px;
+      height: 17px;
+    }
+  }
+
+  // .top-box__text
+
+  &__text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 128%;
+    text-transform: uppercase;
+  }
+}
+.bottom-box {
+  // .bottom-box__number
+
+  &__number {
+    font-family: var(--font-accent);
+    font-weight: 200;
+    font-size: 64px;
+    text-transform: uppercase;
+    color: var(--accent);
+    width: 100px;
+    height: 58px;
+    transition: all 0.3s ease 0s;
+  }
+  &__link {
+    padding: 34px 30px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+    background-color: #00000080;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border: 2px solid var(--accent);
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background-color: #c7aa8080;
+      .bottom-box__number {
+        color: #fff;
+      }
+    }
+  }
+  // .bottom-box__text
+
+  &__text {
+    font-weight: 300;
+    font-size: 40px;
+  }
+}
