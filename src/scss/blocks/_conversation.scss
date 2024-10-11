@@ -216,6 +216,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  picture {
+    width: 9px;
+    height: 5px;
+  }
   img {
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);

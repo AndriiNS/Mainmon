@@ -90,6 +90,9 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  picture {
+    height: 17px;
+  }
 }
 .highlights-button-prev::before,
 .highlights-button-next::before {
