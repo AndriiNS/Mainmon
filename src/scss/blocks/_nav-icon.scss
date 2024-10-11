@@ -8,7 +8,6 @@
   --line-height: 4px;
   --spacing: 6px;
 
-  --color: #000;
   --radius: 4px;
 
   /* Fixed height and width */
@@ -27,7 +26,7 @@
   position: relative;
   width: var(--width);
   height: var(--line-height);
-  background-color: var(--color);
+  background-color: var(--accent);
   border-radius: var(--radius);
 }
 
@@ -43,7 +42,7 @@
   height: var(--line-height);
 
   border-radius: var(--radius);
-  background-color: var(--color);
+  background-color: var(--accent);
   transition: transform var(--time) ease-in, top var(--time) linear var(--time);
 }
 
@@ -82,8 +81,8 @@
   display: none;
 }
 
-// @media (max-width: 1000px) {
-// 	.mobile-nav-btn {
-// 		display: block;
-// 	}
-// }
+@media (max-width: 1190px) {
+  .mobile-nav-btn {
+    display: block;
+  }
+}

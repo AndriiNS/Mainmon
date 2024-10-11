@@ -1,5 +1,4 @@
 .highlights {
-  // .highlights__top
   background-image: url("./../img/inspiration-bg.png");
   background-size: cover;
   position: relative;
@@ -13,6 +12,8 @@
     height: 559px;
     left: 0;
     top: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   &::after {
@@ -25,16 +26,22 @@
     height: 469px;
     right: 0;
     bottom: 0;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
     transform: translateY(50%);
   }
 
   &__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
-
-  // .highlights__title
 
   &__title {
     font-family: var(--font-accent);
@@ -45,7 +52,12 @@
 }
 .highlights__content {
   padding: 148px 0 126px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 129px;
   position: relative;
@@ -60,7 +72,7 @@
   }
 }
 .highlights__swiper {
-  max-width: 830px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -72,7 +84,11 @@
   position: relative;
   width: 98px;
   height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .highlights-button-prev::before,
@@ -83,7 +99,13 @@
   height: 20px;
   border: 2px solid var(--accent);
   border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform: translateX(var(--x, 50%)) translateY(-50%);
+  -ms-transform: translateX(var(--x, 50%)) translateY(-50%);
   transform: translateX(var(--x, 50%)) translateY(-50%);
   left: 50%;
 }
@@ -93,9 +115,15 @@
 .swiper-pagination {
   position: relative !important;
   margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 18px !important;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 30px;
   margin-bottom: 50px;
@@ -150,8 +178,14 @@
   cursor: pointer;
   width: 98px;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   &:hover {
     &::before {
@@ -172,10 +206,18 @@
   height: 20px;
   border: 2px solid var(--accent);
   border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform: translateX(var(--x, 50%)) translateY(-50%);
+  -ms-transform: translateX(var(--x, 50%)) translateY(-50%);
   transform: translateX(var(--x, 50%)) translateY(-50%);
   left: 50%;
   top: 50%;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
 @media (max-width: 1540px) {

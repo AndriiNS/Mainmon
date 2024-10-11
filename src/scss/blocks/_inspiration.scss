@@ -1,7 +1,6 @@
 .inspiration {
   background-image: url("./../img/inspiration-bg.png");
   background-size: cover;
-  height: 1080px;
   padding: 150px 0;
   position: relative;
   &::before {
@@ -12,6 +11,8 @@
     position: absolute;
     width: 340px;
     height: 508px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 0;
     top: 0;
@@ -24,29 +25,37 @@
     position: absolute;
     width: 375px;
     height: 469px;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
     transform: translateY(50%);
     left: 0;
     bottom: 0;
   }
-  // .inspiration__content
 
   &__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 30px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
-  // .inspiration__left
-
   &__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 30px;
     max-width: 470px;
   }
-
-  // .inspiration__left-title
 
   &__left-title {
     font-family: var(--font-accent);
@@ -56,8 +65,6 @@
     max-width: 400px;
   }
 
-  // .inspiration__left-text
-
   &__left-text {
     font-weight: 200;
     font-size: 20px;
@@ -65,10 +72,13 @@
     max-width: 400px;
   }
 
-  // .inspiration__left-box
-
   &__left-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 57px;
     margin-top: 24px;
@@ -78,38 +88,58 @@
     }
   }
 
-  // .inspiration__right
-
   &__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 58px;
   }
 
-  // .inspiration__right-images
-
   &__right-images {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     img {
+      -o-object-fit: cover;
       object-fit: cover;
       &:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
         grid-area: 1 / 1 / 4 / 2;
         min-width: 370px;
         height: 704px;
       }
       &:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
         grid-area: 1 / 2 / 2 / 3;
         min-width: 270px;
         height: 190px;
       }
       &:nth-child(3) {
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
         grid-area: 2 / 2 / 3 / 3;
         width: 270px;
         height: 264px;
       }
       &:nth-child(4) {
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
         grid-area: 3 / 2 / 4 / 3;
         width: 270px;
         height: 190px;
@@ -119,9 +149,13 @@
 }
 
 .lifestyle__title.inspiration-title {
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
   align-self: end;
 }
 .top-box__more.inspiration-more {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 430px;
   z-index: 2;
@@ -136,5 +170,30 @@
       content: "";
       display: none;
     }
+  }
+}
+@media (max-width: 1200px) {
+  .inspiration__right-images {
+    display: none;
+  }
+  .inspiration__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .inspiration__left-box {
+    img {
+      min-width: 100%;
+      height: auto;
+    }
+  }
+  .lifestyle__title.inspiration-title {
+    font-size: 16px;
+  }
+  .top-box__more.inspiration-more {
+    font-size: 24px;
   }
 }
