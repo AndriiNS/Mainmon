@@ -32,7 +32,7 @@
       }
       .production__box-img {
         img {
-          width: 645px;
+          width: calc(var(--hover-width) * 1.67);
         }
       }
     }
@@ -45,7 +45,7 @@
     justify-content: center;
     position: relative;
     img {
-      width: 384px;
+      width: var(--hover-width);
       height: 100%;
       transition: all 1s ease 0s;
       flex-shrink: 0;
@@ -149,5 +149,25 @@
 @media (max-width: 1920px) {
   .production__content {
     max-height: 619px;
+  }
+}
+@media (max-width: 1440px) {
+  .production__utils-link,
+  .production__link {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1340px) {
+  .production__content {
+    max-height: 419px;
+  }
+  .production__box {
+    &:hover {
+      .production__box-img {
+        img {
+          width: 500px;
+        }
+      }
+    }
   }
 }

@@ -2,6 +2,32 @@
   // .highlights__top
   background-image: url("./../img/inspiration-bg.png");
   background-size: cover;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("./../img/slider-gold-top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 413px;
+    height: 559px;
+    left: 0;
+    top: 0;
+    transform: translateY(-50%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("./../img/slider-gold-bottom.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 375px;
+    height: 469px;
+    right: 0;
+    bottom: 0;
+    transform: translateY(50%);
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -151,4 +177,16 @@
   left: 50%;
   top: 50%;
   transition: all 0.5s ease 0s;
+}
+@media (max-width: 1540px) {
+  .highlights {
+    &::after {
+      content: "";
+      display: none;
+    }
+    &::before {
+      content: "";
+      display: none;
+    }
+  }
 }

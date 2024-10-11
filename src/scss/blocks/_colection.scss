@@ -1,17 +1,20 @@
+#animatedSvg {
+  transition: width 0.3s ease, height 0.3s ease, viewBox 0.3s ease;
+}
+
+#animatedPath {
+  transition: d 0.3s ease;
+}
+
+svg path {
+  transition: transform 0.3s ease;
+}
 .collection {
   // .collection__content
-  background-image: url("./../../img/collection-bg.png");
+  background-image: url("./../img/collection-bg.png");
   background-size: cover;
   height: 1080px;
-  position: relative;
-  &::after {
-    content: "";
-    background-image: url("./../img/gold.svg");
-    position: absolute;
-    width: 340px;
-    height: 508px;
-    top: 0;
-  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -75,15 +78,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    &:hover {
-      svg {
-        width: 71px;
-      }
-    }
+    // &:hover {
+    //   svg {
+    //   }
+    // }
     svg {
       transition: all 0.3s ease 0s;
-      width: 130px;
-      height: 17px;
+      height: 19px;
     }
   }
 

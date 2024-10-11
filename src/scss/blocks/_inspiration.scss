@@ -3,6 +3,31 @@
   background-size: cover;
   height: 1080px;
   padding: 150px 0;
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url("./../img/insiration-gold-top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 340px;
+    height: 508px;
+    transform: translateY(-50%);
+    right: 0;
+    top: 0;
+  }
+  &::after {
+    content: "";
+    background-image: url("./../img/insiration-gold-bottom.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 375px;
+    height: 469px;
+    transform: translateY(50%);
+    left: 0;
+    bottom: 0;
+  }
   // .inspiration__content
 
   &__content {
@@ -99,4 +124,17 @@
 .top-box__more.inspiration-more {
   justify-content: space-between;
   max-width: 430px;
+  z-index: 2;
+}
+@media (max-width: 1540px) {
+  .inspiration {
+    &::before {
+      content: "";
+      display: none;
+    }
+    &::after {
+      content: "";
+      display: none;
+    }
+  }
 }
