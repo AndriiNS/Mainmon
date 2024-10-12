@@ -138,12 +138,26 @@
 .footer__menu-item.for-social {
   margin-top: auto;
 }
+.footer__menu-item.gmail-item a {
+  text-transform: lowercase;
+}
 @media (max-width: 860px) {
   .footer__logos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .footer__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+  }
+  .footer__menu-link {
+    font-size: 14px;
   }
 }

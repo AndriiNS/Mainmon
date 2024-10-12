@@ -2,6 +2,7 @@
   background-image: url("./../img/lifestyle-bg.png");
   background-size: cover;
   padding: 150px 0 62px 0;
+  position: relative;
 
   &__content {
     display: -webkit-box;
@@ -12,6 +13,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 52px;
+    position: relative;
   }
 
   &__top {
@@ -178,6 +180,23 @@
         width: 71px;
       }
     }
+  }
+}
+.buy__owner-img {
+  position: absolute;
+  right: 104px;
+  bottom: 0;
+  width: 509px;
+  height: 993px;
+}
+@media (max-width: 1750px) {
+  .buy__owner-img {
+    right: -100px;
+  }
+}
+@media (max-width: 1440px) {
+  .buy__owner-img {
+    display: none;
   }
 }
 @media (max-width: 900px) {

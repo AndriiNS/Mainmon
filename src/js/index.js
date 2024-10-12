@@ -6,18 +6,22 @@ const boxes = document.querySelectorAll(".production__box");
 
 boxes.forEach((box) => {
   box.addEventListener("mouseover", () => {
-    boxes.forEach((b) => {
-      if (b !== box) {
-        b.classList.add("hidden");
-      }
-    });
+    if (window.innerWidth > 1190) {
+      boxes.forEach((b) => {
+        if (b !== box) {
+          b.classList.add("hidden");
+        }
+      });
+    }
   });
 
   box.addEventListener("mouseleave", (event) => {
-    if (!box.contains(event.relatedTarget)) {
-      boxes.forEach((b) => {
-        b.classList.remove("hidden");
-      });
+    if (window.innerWidth > 1190) {
+      if (!box.contains(event.relatedTarget)) {
+        boxes.forEach((b) => {
+          b.classList.remove("hidden");
+        });
+      }
     }
   });
 });
