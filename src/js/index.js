@@ -153,7 +153,6 @@ gsap
     defaults: { ease: "power2.inOut", duration: 1 },
     onComplete: () => {
       document.body.style.overflow = "auto";
-      startHeaderAnimation();
     }
   })
   .fromTo(".preloader img", { width: 0, height: 0, opacity: 0 }, { width: "150px", height: "150px", opacity: 1 })
@@ -162,3 +161,318 @@ gsap
   .fromTo(".preloader__text p:last-child", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, "-=1.5")
   .to(".preloader", { opacity: 0, pointerEvents: "none", duration: 0.5, delay: 0.5 })
   .from(".header", { opacity: 0, y: -50, duration: 1, delay: 0 });
+
+//========================================================================================================================================================
+//header section
+
+gsap.delayedCall(4, () => {
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".header__content",
+        start: "top 60%",
+        toggleActions: "play none none none"
+      }
+    })
+    .from(".header__content-title", { opacity: 0, y: 50, duration: 1 })
+    .from(".header__content-text", { opacity: 0, y: 50, duration: 1 }, "-=0.5")
+    .from(".header__content-crown img", { opacity: 0, scale: 0.5, duration: 1 }, "-=0.5");
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".pick__items",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    })
+    .from(".pick__item-box", {
+      opacity: 0,
+      y: 50,
+      duration: 0.5,
+      stagger: 0.3
+    });
+
+  gsap.from(".pick__search-btn", {
+    scrollTrigger: {
+      trigger: ".pick__search-btn",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    scale: 0.8,
+    duration: 1
+  });
+});
+
+//========================================================================================================================================================
+//lifestyle
+gsap.from(".lifestyle__title.main-title", {
+  scrollTrigger: {
+    trigger: ".lifestyle__content",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1.2,
+  ease: "power3.out"
+});
+
+gsap.from(".left-text__title", {
+  scrollTrigger: {
+    trigger: ".lifestyle__left",
+    start: "top 75%",
+    toggleActions: "play none none reverse"
+  },
+  x: -50,
+  opacity: 0,
+  duration: 1.2,
+  delay: 0.3,
+  ease: "power3.out"
+});
+
+gsap.from(".left-text__text", {
+  scrollTrigger: {
+    trigger: ".lifestyle__left",
+    start: "top 75%",
+    toggleActions: "play none none reverse"
+  },
+  x: -50,
+  opacity: 0,
+  duration: 1.2,
+  delay: 0.6,
+  ease: "power3.out"
+});
+
+gsap.from(".lefestyle__left-img img", {
+  scrollTrigger: {
+    trigger: ".lifestyle__left",
+    start: "top 70%",
+    toggleActions: "play none none reverse"
+  },
+  scale: 0.8,
+  opacity: 0,
+  duration: 1.5,
+  delay: 0.3,
+  ease: "power3.out",
+  stagger: 0.2
+});
+
+gsap.from(".lifestyle__right-info img", {
+  scrollTrigger: {
+    trigger: ".lifestyle__right",
+    start: "top 70%",
+    toggleActions: "play none none reverse"
+  },
+  scale: 0.9,
+  opacity: 0,
+  duration: 1.5,
+  delay: 0.3,
+  ease: "power3.out"
+});
+
+gsap.from(".right-info__box p", {
+  scrollTrigger: {
+    trigger: ".lifestyle__right",
+    start: "top 70%",
+    toggleActions: "play none none reverse"
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1.2,
+  delay: 0.5,
+  ease: "power3.out"
+});
+//========================================================================================================================================================
+//collection
+gsap.from(".collection__top-title", {
+  scrollTrigger: {
+    trigger: ".collection__content",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1.2,
+  ease: "power3.out"
+});
+
+gsap.from(".top-box__text", {
+  scrollTrigger: {
+    trigger: ".collection__content",
+    start: "top 75%",
+    toggleActions: "play none none reverse"
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1.2,
+  delay: 0.3,
+  ease: "power3.out"
+});
+
+gsap.from(".collection__bottom-item", {
+  scrollTrigger: {
+    trigger: ".collection__bottom-list",
+    start: "top 75%",
+    toggleActions: "play none none reverse"
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1.2,
+  stagger: 0.2,
+  ease: "power3.out"
+});
+
+//========================================================================================================================================================
+//inspirayion
+
+gsap.from(".inspiration__left-title", {
+  scrollTrigger: {
+    trigger: ".inspiration__content",
+    start: "top 70%",
+    toggleActions: "play none none reverse"
+  },
+  y: 50,
+  opacity: 1,
+  duration: 1.2,
+  ease: "power3.out"
+});
+
+gsap.from(".inspiration__left-text", {
+  scrollTrigger: {
+    trigger: ".inspiration__left",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  x: -50,
+  opacity: 0,
+  duration: 1.2,
+  delay: 0.3,
+  ease: "power3.out"
+});
+
+gsap.from(".inspiration__left-box img", {
+  scrollTrigger: {
+    trigger: ".inspiration__left",
+    start: "top 75%",
+    toggleActions: "play none none reverse"
+  },
+  scale: 0.8,
+  opacity: 0,
+  duration: 1.5,
+  delay: 0.3,
+  ease: "power3.out"
+});
+
+gsap.from(".inspiration-more", {
+  scrollTrigger: {
+    trigger: ".inspiration__left",
+    start: "top 75%",
+    toggleActions: "play none none reverse"
+  },
+  y: 30,
+  opacity: 0,
+  duration: 1.2,
+  delay: 0.6,
+  ease: "power3.out"
+});
+
+gsap.from(".lifestyle__title.inspiration-title", {
+  scrollTrigger: {
+    trigger: ".inspiration__right",
+    start: "top 75%",
+    toggleActions: "play none none reverse"
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1.2,
+  ease: "power3.out"
+});
+
+gsap.from(".inspiration__right-images img", {
+  scrollTrigger: {
+    trigger: ".inspiration__right-images",
+    start: "top 70%",
+    toggleActions: "play none none reverse"
+  },
+  scale: 0.8,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power3.out",
+  stagger: 0.2
+});
+//========================================================================================================================================================
+//break
+gsap.from(".break__info", {
+  scrollTrigger: {
+    trigger: ".break__content",
+    start: "top 50%",
+    toggleActions: "play none none reverse"
+  },
+  y: 20,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from(".break__content img", {
+  scrollTrigger: {
+    trigger: ".break__content",
+    start: "top 50%",
+    toggleActions: "play none none reverse"
+  },
+  scale: 0,
+  opacity: 0,
+  duration: 1.2,
+  ease: "back.out(1.7)"
+});
+
+gsap.from(".break__title-top", {
+  scrollTrigger: {
+    trigger: ".break__content",
+    start: "top 50%",
+    toggleActions: "play none none reverse"
+  },
+  x: -50,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from(".break__title-bottom", {
+  scrollTrigger: {
+    trigger: ".break__content",
+    start: "top 50%",
+    toggleActions: "play none none reverse"
+  },
+  x: 50,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+//========================================================================================================================================================
+//expirience
+gsap.from(".experience__title", {
+  scrollTrigger: {
+    trigger: ".experience",
+    start: "top 60%",
+    toggleActions: "play none none reverse"
+  },
+  x: -250,
+  opacity: 0,
+  duration: 3,
+  ease: "power3.out"
+});
+
+gsap.from(".experience__subtitle", {
+  scrollTrigger: {
+    trigger: ".experience",
+    start: "top 60%",
+    toggleActions: "play none none reverse"
+  },
+  x: 250,
+  opacity: 0,
+  duration: 2,
+  ease: "power3.out"
+});
