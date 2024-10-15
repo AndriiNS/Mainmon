@@ -25,6 +25,8 @@
     -ms-flex-align: center;
     align-items: center;
     gap: 20px;
+    width: 100%;
+    justify-content: end;
     &::before {
       content: "";
       display: block;
@@ -122,6 +124,9 @@
     text-transform: uppercase;
     max-width: 470px;
   }
+}
+.lifestyle__title.main-title {
+  justify-content: start;
 }
 .lefestyle {
   &__left-img {

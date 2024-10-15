@@ -147,11 +147,16 @@
     }
   }
 }
-
+.inspiration__right {
+  width: 100%;
+}
 .lifestyle__title.inspiration-title {
-  -ms-flex-item-align: end;
-  -ms-grid-row-align: end;
-  align-self: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 }
 .top-box__more.inspiration-more {
   -webkit-box-pack: justify;
