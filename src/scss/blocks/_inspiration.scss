@@ -105,9 +105,8 @@
     -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    img {
-      -o-object-fit: cover;
-      object-fit: cover;
+    picture {
+      display: block;
       &:nth-child(1) {
         -ms-grid-row: 1;
         -ms-grid-row-span: 3;
@@ -143,6 +142,10 @@
         grid-area: 3 / 2 / 4 / 3;
         width: 270px;
         height: 190px;
+      }
+      img {
+        -o-object-fit: cover;
+        object-fit: cover;
       }
     }
   }
