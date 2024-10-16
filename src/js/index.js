@@ -107,10 +107,13 @@ const nextButtonHigh = document.querySelector(".highlights-button-next");
 function followCursorHorizontally(button, isNextButton = false) {
   button.addEventListener("mousemove", (event) => {
     const buttonRect = button.getBoundingClientRect();
-    let x = event.clientX - buttonRect.left - buttonRect.width / 2;
+    const pseudoElementWidth = 40; // Висота і ширина псевдоелемента
+    let x = event.clientX - buttonRect.left - buttonRect.width / 2 + pseudoElementWidth / 2;
 
     if (isNextButton) {
       x = -x;
+    } else {
+      x -= pseudoElementWidth / 2 + pseudoElementWidth / 2;
     }
 
     button.style.setProperty("--x", `${x}px`);
@@ -121,10 +124,11 @@ function followCursorHorizontally(button, isNextButton = false) {
   });
 }
 
-followCursorHorizontally(prevButton);
-followCursorHorizontally(nextButton, true);
-followCursorHorizontally(prevButtonHigh);
-followCursorHorizontally(nextButtonHigh, true);
+// Виклики функції
+followCursorHorizontally(prevButton); // Ліва кнопка
+followCursorHorizontally(nextButton, true); // Права кнопка
+followCursorHorizontally(prevButtonHigh); // Ліва кнопка
+followCursorHorizontally(nextButtonHigh, true); // Права кнопка
 //========================================================================================================================================================
 document.addEventListener("DOMContentLoaded", () => {
   const dropdownTrigger = document.querySelector(".dropdown-trigger");
@@ -259,7 +263,7 @@ gsap.from(".lefestyle__left-img img", {
   stagger: 0.2
 });
 
-gsap.from(".lifestyle__right-info img", {
+gsap.from(".lifestyle__right-info > img", {
   scrollTrigger: {
     trigger: ".lifestyle__right",
     start: "top 70%",
@@ -459,7 +463,7 @@ gsap.from(".experience__title", {
     start: "top 60%",
     toggleActions: "play none none reverse"
   },
-  x: -250,
+  y: -150,
   opacity: 0,
   duration: 3,
   ease: "power3.out"
@@ -471,8 +475,113 @@ gsap.from(".experience__subtitle", {
     start: "top 60%",
     toggleActions: "play none none reverse"
   },
-  x: 250,
+  y: -150,
   opacity: 0,
   duration: 2,
+  ease: "power3.out"
+});
+//========================================================================================================================================================
+//conversation
+
+gsap.from(".conversation__input-box input", {
+  scrollTrigger: {
+    trigger: ".conversation__input-box",
+    start: "top 70%",
+    once: true
+  },
+  opacity: 0,
+  clipPath: "inset(0 100% 0 0)",
+  duration: 3,
+  ease: "power3.out"
+});
+gsap.from(".conversation__agreement", {
+  scrollTrigger: {
+    trigger: ".conversation__agreement",
+    start: "top 80%",
+    once: true
+  },
+  opacity: 0,
+  clipPath: "inset(0 100% 0 0)",
+  duration: 3,
+  ease: "power3.out"
+});
+gsap.from(".conversation_choise-box", {
+  scrollTrigger: {
+    trigger: ".conversation_choise-box",
+    start: "top 80%",
+    once: true
+  },
+  opacity: 0,
+  clipPath: "inset(0 100% 0 0)",
+  duration: 3,
+  ease: "power3.out"
+});
+gsap.from(".conversation__title", {
+  scrollTrigger: {
+    trigger: ".conversation__title",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  opacity: 0,
+  clipPath: "inset(0 100% 0 0)",
+  duration: 4,
+  ease: "power3.out"
+});
+//========================================================================================================================================================
+//buy
+
+gsap.from(".buy__title", {
+  scrollTrigger: {
+    trigger: ".buy__title",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  opacity: 0,
+  clipPath: "inset(0 100% 0 0)",
+  duration: 4,
+  ease: "power3.out"
+});
+gsap.from(".buy__text", {
+  scrollTrigger: {
+    trigger: ".buy__text",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  opacity: 0,
+  clipPath: "inset(0 100% 0 0)",
+  duration: 4,
+  ease: "power3.out"
+});
+gsap.from(".buy__owner", {
+  scrollTrigger: {
+    trigger: ".buy__owner",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  opacity: 0,
+  clipPath: "inset(0 100% 0 0)",
+  duration: 4,
+  ease: "power3.out"
+});
+gsap.from(".buy__role", {
+  scrollTrigger: {
+    trigger: ".buy__role",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  opacity: 0,
+  clipPath: "inset(0 100% 0 0)",
+  duration: 4,
+  ease: "power3.out"
+});
+gsap.from(".buy__box", {
+  scrollTrigger: {
+    trigger: ".buy__box",
+    start: "top 80%",
+    toggleActions: "play none none reverse"
+  },
+  opacity: 0,
+  clipPath: "inset(0 100% 0 0)",
+  duration: 4,
   ease: "power3.out"
 });

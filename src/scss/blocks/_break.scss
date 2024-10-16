@@ -1,6 +1,7 @@
 .break {
   background-color: #fffff2;
   padding: 126px 0 100px 0;
+  overflow-x: hidden;
 
   &__content {
     display: -webkit-box;
@@ -132,7 +133,7 @@
         letter-spacing: 0.08em;
         &:before {
           opacity: 1;
-          z-index: -1;
+          z-index: 2;
         }
       }
     }
@@ -169,6 +170,10 @@
       -o-transition: opacity 0.3s ease;
       transition: opacity 0.3s ease;
       z-index: 2;
+    }
+    span {
+      position: relative;
+      z-index: 10;
     }
   }
 }
@@ -262,19 +267,19 @@
   height: 20px;
   border: 2px solid var(--accent);
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  -o-transition: transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  -o-transition: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
   -webkit-transform: translateX(var(--x, 50%)) translateY(-50%);
   -ms-transform: translateX(var(--x, 50%)) translateY(-50%);
   transform: translateX(var(--x, 50%)) translateY(-50%);
   left: 50%;
   top: 50%;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s linear 0s;
+  -o-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
 }

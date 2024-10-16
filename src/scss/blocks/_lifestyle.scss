@@ -100,11 +100,15 @@
       background-color: #c7a98080;
       border: 2px solid #c7a98000;
     }
-    img {
+    picture {
       width: 17px;
       height: 10px;
+    }
+    img {
       -webkit-filter: brightness(10);
       filter: brightness(10);
+      width: 17px;
+      height: 10px;
     }
   }
 }
