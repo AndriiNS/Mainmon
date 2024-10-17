@@ -107,7 +107,7 @@ const nextButtonHigh = document.querySelector(".highlights-button-next");
 function followCursorHorizontally(button, isNextButton = false) {
   button.addEventListener("mousemove", (event) => {
     const buttonRect = button.getBoundingClientRect();
-    const pseudoElementWidth = 40; // Висота і ширина псевдоелемента
+    const pseudoElementWidth = 40;
     let x = event.clientX - buttonRect.left - buttonRect.width / 2 + pseudoElementWidth / 2;
 
     if (isNextButton) {
@@ -124,11 +124,10 @@ function followCursorHorizontally(button, isNextButton = false) {
   });
 }
 
-// Виклики функції
-followCursorHorizontally(prevButton); // Ліва кнопка
-followCursorHorizontally(nextButton, true); // Права кнопка
-followCursorHorizontally(prevButtonHigh); // Ліва кнопка
-followCursorHorizontally(nextButtonHigh, true); // Права кнопка
+followCursorHorizontally(prevButton);
+followCursorHorizontally(nextButton, true);
+followCursorHorizontally(prevButtonHigh);
+followCursorHorizontally(nextButtonHigh, true);
 //========================================================================================================================================================
 document.addEventListener("DOMContentLoaded", () => {
   const dropdownTrigger = document.querySelector(".dropdown-trigger");
