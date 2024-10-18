@@ -64,7 +64,7 @@
     -webkit-transition: all 1s ease 0s;
     -o-transition: all 1s ease 0s;
     transition: all 1s ease 0s;
-
+    overflow: hidden;
     &:hover {
       scale: 1.05;
       -webkit-box-shadow: 0 15px 27px 0 rgba(0, 0, 0, 0.28);
@@ -86,7 +86,7 @@
     align-items: center;
     gap: 30px;
     position: absolute;
-    bottom: 100px;
+    top: 64%;
     height: 135px;
     img {
       width: 29px;
@@ -102,6 +102,11 @@
     text-align: center;
     color: #fff;
     padding: 0 82px;
+  }
+}
+@media (max-width: 1440px) {
+  .expirience__blocks-text {
+    font-size: 28px;
   }
 }
 @media (max-width: 1000px) {

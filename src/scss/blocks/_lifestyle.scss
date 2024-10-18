@@ -62,14 +62,9 @@
   }
 
   &__right-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    height: 100%;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 100px;
+    align-items: end;
   }
 
   &__right-text {
@@ -123,10 +118,9 @@
 
   &__text {
     font-weight: 200;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 145%;
     text-transform: uppercase;
-    max-width: 470px;
   }
 }
 .lifestyle__title.main-title {
@@ -138,8 +132,27 @@
     display: -ms-flexbox;
     display: flex;
     gap: 30px;
+    img {
+      width: 266px;
+      height: 397px;
+    }
   }
 }
+.lifestyle__left-img {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.lifestyle__right-img-box {
+  display: flex;
+  gap: 38px;
+  img {
+    max-width: 266px;
+    width: 100%;
+    height: auto;
+  }
+}
+
 .left-img {
   &__box {
     display: -webkit-box;
@@ -153,7 +166,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-
+    flex-shrink: 0;
     img {
       width: 270px;
       height: 170px;
@@ -162,13 +175,6 @@
 }
 .right-info {
   &__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    gap: 70px;
   }
 }
 @media (max-width: 1190px) {
@@ -181,6 +187,9 @@
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  .lifestyle__right-img-box {
+    justify-content: center;
+  }
   .lifestyle__left-text {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -191,6 +200,14 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+}
+@media (max-width: 580px) {
+  .lifestyle__right-img-box {
+    gap: 10px;
+    img {
+      width: 150px;
+    }
   }
 }
 @media (max-width: 600px) {
@@ -216,4 +233,12 @@
   .left-text__title {
     font-size: 40px;
   }
+}
+.lifestyle__img-huge {
+  width: 270px;
+  height: 370px;
+}
+.lifestyle__right-info-img {
+  width: 570px;
+  height: 170px;
 }

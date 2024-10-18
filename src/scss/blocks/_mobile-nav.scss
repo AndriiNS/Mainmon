@@ -12,7 +12,7 @@
   padding-bottom: 40px;
   background: #0a2e26;
   transition: all 0.2s ease-in;
-  gap: 20px;
+  gap: 30px;
 }
 
 .mobile-nav--open {
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 
   & .active {
     opacity: 0.5;
@@ -42,4 +42,9 @@
   position: absolute;
   top: 10px;
   left: 10px;
+}
+@media (max-width: 700px) {
+  .header__utils-box {
+    top: 15%;
+  }
 }

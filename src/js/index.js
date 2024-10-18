@@ -97,6 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
       el: ".swiper-scrollbar"
     }
   });
+  window.addEventListener("resize", () => {
+    highlightsSwiper.update();
+  });
 });
 
 const prevButton = document.querySelector(".swiper-btn-prev");
@@ -573,14 +576,14 @@ gsap.from(".buy__role", {
   duration: 4,
   ease: "power3.out"
 });
-gsap.from(".buy__box", {
-  scrollTrigger: {
-    trigger: ".buy__box",
-    start: "top 80%",
-    toggleActions: "play none none reverse"
-  },
-  opacity: 0,
-  clipPath: "inset(0 100% 0 0)",
-  duration: 4,
-  ease: "power3.out"
-});
+// gsap.from(".buy__box", {
+//   scrollTrigger: {
+//     trigger: ".buy__box",
+//     start: "top 80%",
+//     toggleActions: "play none none reverse"
+//   },
+//   opacity: 0,
+//   clipPath: "inset(0 100% 0 0)",
+//   duration: 4,
+//   ease: "power3.out"
+// });

@@ -36,9 +36,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     gap: 30px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -100,58 +97,33 @@
   }
 
   &__right-images {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 30px 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 30px;
-    picture {
-      display: block;
-      &:nth-child(1) {
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 3;
-        -ms-grid-column: 1;
-        -ms-grid-column-span: 1;
-        grid-area: 1 / 1 / 4 / 2;
-        min-width: 370px;
-        height: 704px;
-      }
-      &:nth-child(2) {
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 1;
-        -ms-grid-column: 2;
-        -ms-grid-column-span: 1;
-        grid-area: 1 / 2 / 2 / 3;
-        min-width: 270px;
-        height: 190px;
-      }
-      &:nth-child(3) {
-        -ms-grid-row: 2;
-        -ms-grid-row-span: 1;
-        -ms-grid-column: 2;
-        -ms-grid-column-span: 1;
-        grid-area: 2 / 2 / 3 / 3;
-        width: 270px;
-        height: 264px;
-      }
-      &:nth-child(4) {
-        -ms-grid-row: 3;
-        -ms-grid-row-span: 1;
-        -ms-grid-column: 2;
-        -ms-grid-column-span: 1;
-        grid-area: 3 / 2 / 4 / 3;
-        width: 270px;
-        height: 190px;
-      }
-      img {
-        -o-object-fit: cover;
-        object-fit: cover;
-      }
+    img {
+      width: 370px;
+      height: 629px;
     }
   }
 }
 .inspiration__right {
   width: 100%;
+}
+.inspiration__right-images-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img {
+    &:nth-child(1) {
+      width: 270px;
+      height: 312px;
+    }
+  }
+  img {
+    &:nth-child(2) {
+      width: 270px;
+      height: 279px;
+    }
+  }
 }
 .lifestyle__title.inspiration-title {
   display: -webkit-box;
@@ -167,6 +139,16 @@
   justify-content: space-between;
   max-width: 430px;
   z-index: 2;
+  gap: 20px;
+  height: 26px;
+  svg {
+    transition: all 0.3s ease 0s;
+  }
+  &:hover {
+    svg {
+      width: 71px;
+    }
+  }
 }
 @media (max-width: 1540px) {
   .inspiration {
@@ -177,6 +159,50 @@
     &::after {
       content: "";
       display: none;
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .inspiration__right-images {
+    justify-content: flex-end;
+    img {
+      width: 270px;
+      height: 429px;
+    }
+  }
+  .inspiration__right {
+    max-width: fit-content;
+  }
+  .inspiration__content {
+    justify-content: center;
+    gap: 30px;
+  }
+  .lifestyle__title.inspiration-title {
+    text-wrap: nowrap;
+    font-size: 18px;
+  }
+  .inspiration__left-box {
+    img {
+      min-width: 424px;
+      height: 231px;
+    }
+  }
+
+  .inspiration__right-images-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+      &:nth-child(1) {
+        width: 170px;
+        height: 212px;
+      }
+    }
+    img {
+      &:nth-child(2) {
+        width: 170px;
+        height: 179px;
+      }
     }
   }
 }

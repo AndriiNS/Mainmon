@@ -236,6 +236,24 @@
     }
   }
 }
+@media (max-width: 1440px) {
+  .swiper-slide.highlights-slide {
+    height: 400px;
+    width: 320px;
+  }
+  .highlights__swiper {
+    max-width: 670px;
+  }
+}
+@media (max-width: 1350px) {
+  .swiper-slide.highlights-slide {
+    height: 300px;
+    width: 220px;
+  }
+  .highlights__swiper {
+    max-width: 570px;
+  }
+}
 @media (max-width: 1100px) {
   .highlights-button-prev,
   .highlights-button-next {

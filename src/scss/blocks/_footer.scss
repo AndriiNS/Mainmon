@@ -1,163 +1,167 @@
 .footer {
-  padding: 80px 0 53px 0;
-  background-color: #000;
+  background: #12241f;
+  padding: 32px 0 40px 0;
+  // .footer__inner
+
+  &__inner {
+    border-bottom: 1px solid var(--accent);
+    border-top: 1px solid var(--accent);
+    padding: 32px 0;
+  }
+
+  // .footer__row
+
   &__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  &__top {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 50px;
-  }
-
-  &__logos {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 22px;
-    flex-shrink: 0;
-    -ms-flex-negative: 0;
-  }
-
-  &__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 63px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  &__menu-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 31px;
-  }
-  &__menu-social {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    gap: 22px;
+    gap: 100px;
   }
 
-  &__menu-item {
-    img {
-      -webkit-transition: all 0.3s ease 0s;
-      -o-transition: all 0.3s ease 0s;
+  // .footer__logo
+
+  // &__logo {
+  // }
+
+  // .footer__nav
+
+  &__nav {
+    display: flex;
+    gap: 108px;
+    width: 100%;
+  }
+
+  // .footer__nav-list
+  &__nav-list-accent {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: end;
+    display: flex;
+    width: 100%;
+  }
+  &__nav-link {
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  // .footer__nav-item
+
+  // &__nav-item {
+  // }
+
+  // .footer__nav-list-accent
+
+  &__nav-link-accent {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: right;
+    color: #c7ab80;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  // .footer__bottom
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  // .footer__gmail
+
+  &__gmail {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #c7ab80;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  // .footer__site
+
+  &__site {
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #c7ab80;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  // .footer__links
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    a {
+      width: 40px;
+      height: 40px;
       transition: all 0.3s ease 0s;
       &:hover {
         scale: 1.2;
-        -webkit-filter: invert(38%) sepia(26%) saturate(452%) hue-rotate(14deg) brightness(95%) contrast(88%);
-        filter: invert(38%) sepia(26%) saturate(452%) hue-rotate(14deg) brightness(95%) contrast(88%);
       }
     }
   }
-
-  &__menu-link {
-    font-weight: 500;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #fff;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    &:hover {
-      color: var(--accent);
-    }
+}
+@media (max-width: 1055px) {
+  .footer__row {
+    flex-direction: column;
+    gap: 30px;
   }
-
-  &__location {
-    a {
-      color: #fff;
-      -webkit-transition: all 0.3s ease 0s;
-      -o-transition: all 0.3s ease 0s;
-      transition: all 0.3s ease 0s;
-      &:hover {
-        color: var(--accent);
-      }
-    }
-    text-align: center;
-    margin-top: 100px;
-    font-weight: 500;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding-bottom: 45px;
-    border-bottom: 1px solid var(--accent);
-  }
-
-  &__privacy {
-    margin-top: 53px;
-  }
-
-  &__privacy-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
+  .footer__nav {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 67px;
   }
-
-  &__privacy-link {
-    font-weight: 500;
-    font-size: 12px;
-    color: #fff;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    &:hover {
-      color: var(--accent);
-    }
+  .footer__nav-list-accent {
+    width: fit-content;
   }
 }
-.footer__menu-item.for-social {
-  margin-top: auto;
-}
-.footer__menu-item.gmail-item a {
-  text-transform: lowercase;
-}
-@media (max-width: 860px) {
-  .footer__logos {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+@media (max-width: 760px) {
+  .footer__nav-list-accent {
+    align-items: flex-start;
   }
-  .footer__top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .footer__nav {
+    gap: 30px;
   }
-  .footer__menu-link {
-    font-size: 14px;
+  .footer__bottom {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .footer__nav {
+    justify-content: space-around;
+    align-items: start;
+  }
+}
+@media (max-width: 340px) {
+  .footer__nav-list-accent,
+  .footer__nav-list {
+    width: 100%;
   }
 }

@@ -4,7 +4,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-height: 719px;
+    max-height: fit-content;
     overflow-x: hidden;
   }
 
@@ -40,7 +40,7 @@
       }
       .production__box-img {
         img {
-          width: calc(var(--hover-width) * 1.67);
+          width: calc(384px * 1.67);
         }
       }
     }
@@ -55,7 +55,7 @@
     justify-content: center;
     position: relative;
     img {
-      width: var(--hover-width);
+      width: 384px;
       height: 100%;
       -webkit-transition: all 1s ease 0s;
       -o-transition: all 1s ease 0s;

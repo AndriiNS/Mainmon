@@ -1,10 +1,11 @@
 .header {
   background-color: #0a2e26;
+  position: relative;
+  z-index: 1000;
   &__wrapper {
     background-image: url("./../img/header-bg.png");
     background-position: center;
     background-size: cover;
-    height: 1080px;
   }
   &__row {
     display: -webkit-box;
@@ -14,6 +15,7 @@
     -ms-flex-align: center;
     align-items: center;
     padding: 15px 0;
+    position: relative;
   }
 
   &__menu {
@@ -349,6 +351,39 @@
     img {
       rotate: 180deg;
     }
+  }
+}
+@media (max-width: 1600px) {
+  .header__row {
+    padding: 10px 0;
+  }
+  .header__content {
+    margin-top: 50px;
+  }
+  .header__text-box {
+    gap: 40px;
+  }
+  .header__pick-box {
+    margin-top: 50px;
+  }
+  .header__content-title {
+    font-size: 72px;
+    max-width: 800px;
+  }
+}
+@media (max-width: 1440px) {
+  .header__content-crown img {
+    width: 51px;
+    height: 57px;
+  }
+  .header__content-text {
+    font-size: 24px;
+  }
+  .header__pick-box {
+    padding: 40px 0;
+  }
+  .header__line {
+    height: 50px;
   }
 }
 @media (max-width: 1190px) {
