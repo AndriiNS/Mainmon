@@ -167,7 +167,7 @@
     justify-content: flex-end;
     img {
       width: 270px;
-      height: 429px;
+      height: 436px;
     }
   }
   .inspiration__right {
@@ -236,15 +236,13 @@
     font-size: 24px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 30px;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
+
+    gap: 10px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     svg {
-      -ms-flex-item-align: end;
-      align-self: flex-end;
+      width: 70px;
     }
   }
   .inspiration__left-title {
