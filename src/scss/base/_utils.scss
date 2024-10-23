@@ -1,20 +1,62 @@
 .none {
-	display: none !important;
+  display: none !important;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .no-scroll {
-	overflow-y: hidden;
+  overflow-y: hidden;
+}
+.another-pages {
+  // .another-pages__wrapper
+  position: absolute;
+  right: -50%;
+  top: -10px;
+  font-size: 30px;
+  &__wrapper {
+    position: fixed;
+    z-index: 1000;
+    top: 100px;
+    left: -110px;
+    transition: all 0.3s ease 0s;
+  }
+
+  // .another-pages__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    max-width: fit-content;
+  }
+
+  // .another-pages__item
+
+  &__item {
+  }
+  &__link {
+    color: #000;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+.another-pages__wrapper.active {
+  left: 10px;
 }

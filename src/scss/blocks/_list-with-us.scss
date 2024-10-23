@@ -1,0 +1,42 @@
+.header__wrapper.list-with-us__wrapper {
+  background-image: url("./../img/list-with-us-bg.png");
+}
+.header__content-text.page-list {
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.page-list {
+  // .page-list__list
+
+  &__list {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+  }
+
+  // .page-list__item
+
+  //   &__item {
+  //   }
+
+  // .page-list__text
+
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--accent);
+  }
+}
+.list {
+  // .list__separator
+
+  &__separator {
+    height: 110px;
+    background-color: var(--accent);
+    width: 1px;
+  }
+}
+.header__pick-box.list-page {
+  padding: 40px 0;
+}

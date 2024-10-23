@@ -20,6 +20,14 @@
     </div>
     @@include('blocks/header.html')
     <main class="main">
+      <div class="another-pages__wrapper">
+        <button class="another-pages">📄</button>
+        <ul class="another-pages__list">
+          <li class="another-pages__item"><a class="another-pages__link" href="./index.html">index</a></li>
+          <li class="another-pages__item"><a class="another-pages__link" href="./home-page.html">home-page</a></li>
+          <li class="another-pages__item"><a class="another-pages__link" href="./list-with-us.html">list with us</a></li>
+        </ul>
+      </div>
       @@include('blocks/lifestyle.html') @@include('blocks/collection.html') @@include('blocks/inspiration.html') @@include('blocks/break.html')
       @@include('blocks/production.html') @@include('blocks/expirience.html') @@include('blocks/partner.html') @@include('blocks/buy.html')
       @@include('blocks/break-industry.html') @@include('blocks/highlights.html') @@include('blocks/conversation.html')
@@ -45,6 +53,7 @@
         touchpadSupport: true,
       });
     </script>
+    <script src="./js/preloader.bundle.js"></script>
     <script src="./js/index.bundle.js"></script>
   </body>
 </html>

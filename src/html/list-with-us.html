@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mainmon / Home</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body style="overflow-x: hidden;">
+    <div class="preloader">
+      <div class="preloader__green"></div>
+      <div class="preloader__content">
+        <img src="./img/mainmon-tree.svg" alt="logo" />
+        <div class="preloader__text">
+          <p>Mainmon</p>
+          <p>group</p>
+        </div>
+      </div>
+    </div>
+    @@include('blocks/list-with-us-header.html')
+    <main class="main">
+      <div class="another-pages__wrapper">
+        <button class="another-pages">📄</button>
+        <ul class="another-pages__list">
+          <li class="another-pages__item"><a class="another-pages__link" href="./index.html">index</a></li>
+          <li class="another-pages__item"><a class="another-pages__link" href="./home-page.html">home-page</a></li>
+          <li class="another-pages__item"><a class="another-pages__link" href="./list-with-us.html">list with us</a></li>
+        </ul>
+      </div>
+    </main>
+
+    @@include('blocks/footer.html')
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+      integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+           SmoothScroll({
+        animationTime: 1200,
+        stepSize: 45,
+        accelerationDelta: 30,
+        accelerationMax: 2,
+        keyboardSupport: true,
+        arrowScroll: 50,
+        pulseAlgorithm: true,
+        pulseScale: 4,
+        pulseNormalize: 1,
+        touchpadSupport: true,
+      });
+    </script>
+    <script src="./js/preloader.bundle.js"></script>
+  </body>
+</html>

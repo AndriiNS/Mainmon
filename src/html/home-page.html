@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mainmon / Home</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body style="overflow-x: hidden;">
+    <div class="preloader">
+      <div class="preloader__green"></div>
+      <div class="preloader__content">
+        <img src="./img/mainmon-tree.svg" alt="logo" />
+        <div class="preloader__text">
+          <p>Mainmon</p>
+          <p>group</p>
+        </div>
+      </div>
+    </div>
+    @@include('blocks/single-header.html')
+    <main class="main">
+      <div class="another-pages__wrapper">
+        <button class="another-pages">📄</button>
+        <ul class="another-pages__list">
+          <li class="another-pages__item"><a class="another-pages__link" href="./index.html">index</a></li>
+          <li class="another-pages__item"><a class="another-pages__link" href="./home-page.html">home-page</a></li>
+          <li class="another-pages__item"><a class="another-pages__link" href="./list-with-us.html">list with us</a></li>
+        </ul>
+      </div>
+      <section class="single-page__sorting single__sorting ">
+        <div class="container">
+          <div class="single__sorting-content">
+            <div class="single__sorting-top">
+              <ul class="single__sorting-list">
+                <li class="single__sorting-item">
+                  <button class="single__sorting-choise" data-filter="Inspired by occasion">Inspired by occasion</button>
+                </li>
+                <li class="single__sorting-item"><button class="single__sorting-choise" data-filter="Leisure Guides">Leisure Guides</button> </li>
+                <li class="single__sorting-item">
+                  <button class="single__sorting-choise" data-filter="Villa Experiences">Villa Experiences</button>
+                </li>
+                <li class="single__sorting-item">
+                  <button class="single__sorting-choise" data-filter="Luxury Hospitality Practices">Luxury Hospitality Practices</button>
+                </li>
+                <li class="single__sorting-item"><button class="single__sorting-choise" data-filter="Owner Insights">Owner Insights</button> </li>
+              </ul>
+              <button class="single__sorting-btn">Filter</button>
+            </div>
+            <div class="single__sorting-result">Sotring: <span id="sort-result">by date</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="single-page__block">
+        <div class="container">
+          <div class="single-page__wrapper">
+            <div class="single-page__post">
+              <div class="single__post-info">
+                <h2 class="post-info__title">Top golf getaways in Los Angeles</h2>
+                <div class="single__time-box">
+                  <div class="single__name">Leisure Guides</div>
+                  <div class="single__time">13 October 2023</div>
+                </div>
+                <p class="single__text">
+                  Indulge in the height of summer with active outdoor experiences like golfing. Enhancing your California summer getaway, we have
+                  curated a collection of premier golf courses in Los Angeles, lorem100 complemented by our exquisite vacation homes in the respective
+                  areas.
+                </p>
+                <a href="#!" class="single__more">Read more</a>
+              </div>
+              <div class="single-page__post-image">
+                <img src="./../img/single-page1.png" alt="golf img" />
+              </div>
+            </div>
+            <div class="single-page__more">
+              <div class="single__more-box">
+                <img src="./../img/single-page-more1.png" alt="Villa Experiences" />
+                <div class="single__more-title">Villa Experiences</div>
+                <div class="single__more-text">Private wellness retreats</div>
+              </div>
+              <div class="single__more-box">
+                <img src="./../img/single-page-more2.png" alt="Leisure Guides" />
+                <div class="single__more-title">Leisure Guides</div>
+                <div class="single__more-text">Malibu adventures</div>
+              </div>
+              <div class="single__more-box">
+                <img src="./../img/single-page-more3.png" alt="Villa Experiences" />
+                <div class="single__more-title">Villa Experiences</div>
+                <div class="single__more-text">Cook at our top chef kitchens</div>
+              </div>
+            </div>
+          </div>
+          <div class="single-page__wrapper">
+            <div class="single-page__post single-page__reverse">
+              <div class="single__post-info">
+                <h2 class="post-info__title"
+                  >What to Know about F1 <br />
+                  Las Vegas</h2
+                >
+                <div class="single__time-box">
+                  <div class="single__name">Inspired by occasion</div>
+                  <div class="single__time">13 October 2023</div>
+                </div>
+                <p class="single__text"> Your ultimate guide to the main race weekend of the year. </p>
+                <a href="#!" class="single__more">Read more</a>
+              </div>
+              <div class="single-page__post-image">
+                <img src="./../img/single-page2.png" alt="golf img" />
+              </div>
+            </div>
+            <div class="single-page__more">
+              <div class="single__more-box">
+                <img src="./../img/single-page-more4.png" alt="Villa Experiences" />
+                <div class="single__more-title">Inspired by occasion</div>
+                <div class="single__more-text more-text-accent">Elevate your Miami Art Basel Experience</div>
+              </div>
+              <div class="single__more-box">
+                <img src="./../img/single-page-more5.png" alt="Leisure Guides" />
+                <div class="single__more-title">Inspired by occasion</div>
+                <div class="single__more-text more-text-accent">Why rent a villa for holidays</div>
+              </div>
+              <div class="single__more-box">
+                <img src="./../img/single-page-more6.png" alt="Villa Experiences" />
+                <div class="single__more-title">Inspired by occasion</div>
+                <div class="single__more-text more-text-accent">Wedding in Los Angeles</div>
+              </div>
+            </div>
+          </div>
+          <div class="single-page__wrapper">
+            <div class="single-page__post">
+              <div class="single__post-info">
+                <h2 class="post-info__title">Alluring Scent, Sleek Look, Eco Purity</h2>
+                <div class="single__time-box">
+                  <div class="single__name">Luxury Hospitality practices</div>
+                  <div class="single__time">13 October 2023</div>
+                </div>
+                <p class="single__text"> Products that make our bathrooms feel like spa </p>
+                <a href="#!" class="single__more">Read more</a>
+              </div>
+              <div class="single-page__post-image">
+                <img src="./../img/single-page1.png" alt="golf img" />
+              </div>
+            </div>
+            <div class="single-page__more">
+              <div class="single__more-box">
+                <img src="./../img/single-page-more7.png" alt="Villa Experiences" />
+                <div class="single__more-title">Owner insights</div>
+                <div class="single__more-text more-text-accent">Taking care of homes in extreme weather conditions </div>
+              </div>
+              <div class="single__more-box">
+                <img src="./../img/single-page-more8.png" alt="Leisure Guides" />
+                <div class="single__more-title">Luxury Hospitality practices</div>
+                <div class="single__more-text more-text-accent">Sleep like at a hotel: luxury linens</div>
+              </div>
+              <div class="single__more-box">
+                <img src="./../img/single-page-more9.png" alt="Villa Experiences" />
+                <div class="single__more-title">Owner insights</div>
+                <div class="single__more-text more-text-accent">Choose the Right Property Management Company</div>
+              </div>
+            </div>
+          </div>
+          <button class="single-load__more-btn">load more</button>
+        </div>
+      </section>
+      <section class="single-page__break single__break">
+        <div class="container">
+          <div class="break partner-break single-break">
+            <div class="container">
+              <div class="single-break__content ">
+                <img src="./img/crown.svg" alt="crown" />
+                <div class="break__title partner-title">
+                  <div class="break__title-top single-break__title">
+                    Follow us on <br />
+                    social media
+                  </div>
+                  <div class="single-break__text">Follow us on your favourite social channels</div>
+                </div>
+              </div>
+              <ul class="single-break__social">
+                <li class="single__social-item">
+                  <a href="#!" class="single__social-link">
+                    <img src="./img/icons/single-twitter.svg" alt="Twitter" />
+                    <span>Twitter</span>
+                  </a>
+                </li>
+                <li class="single__social-item">
+                  <a href="#!" class="single__social-link">
+                    <img src="./img/icons/single-tiktok.svg" alt="tiktok" />
+                    <span>Tik Tok</span>
+                  </a>
+                </li>
+                <li class="single__social-item">
+                  <a href="#!" class="single__social-link">
+                    <img src="./img/icons/single-linked.svg" alt="linked" />
+                    <span>LinkedIn</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('blocks/footer.html')
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+      integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+           SmoothScroll({
+        animationTime: 1200,
+        stepSize: 45,
+        accelerationDelta: 30,
+        accelerationMax: 2,
+        keyboardSupport: true,
+        arrowScroll: 50,
+        pulseAlgorithm: true,
+        pulseScale: 4,
+        pulseNormalize: 1,
+        touchpadSupport: true,
+      });
+    </script>
+    <script src="./js/preloader.bundle.js"></script>
+  </body>
+</html>

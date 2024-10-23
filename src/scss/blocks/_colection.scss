@@ -130,7 +130,8 @@
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     &:hover {
-      background-color: #c7aa8080;
+      background-color: #ffffff80;
+      border: 2px solid #fff;
       .bottom-box__number {
         color: #fff;
       }
