@@ -19,3 +19,27 @@ const anotherPagesBlock = document.querySelector(".another-pages__wrapper");
 anotherPagesBtn.addEventListener("click", () => {
   anotherPagesBlock.classList.toggle("active");
 });
+//========================================================================================================================================================
+document.querySelectorAll(".plist__select-box").forEach((selectBox) => {
+  const input = selectBox.querySelector("input");
+  const dropdown = selectBox.querySelector(".plist__dropdown");
+  const options = dropdown.querySelectorAll(".plist__dropdown-option");
+  const plistArrow = document.querySelectorAll(".plist__select-box");
+  input.addEventListener("click", () => {
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    plistArrow.classList.toggle("active");
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      input.value = option.textContent;
+      dropdown.style.display = "none";
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!selectBox.contains(event.target)) {
+      dropdown.style.display = "none";
+    }
+  });
+});
